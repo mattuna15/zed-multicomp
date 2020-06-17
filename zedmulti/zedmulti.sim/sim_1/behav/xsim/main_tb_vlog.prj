@@ -1,0 +1,9 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../zedmulti.ip_user_files/bd/cga_bold_rom_reduced/ip/cga_bold_rom_reduced_blk_mem_gen_0_0/sim/cga_bold_rom_reduced_blk_mem_gen_0_0.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

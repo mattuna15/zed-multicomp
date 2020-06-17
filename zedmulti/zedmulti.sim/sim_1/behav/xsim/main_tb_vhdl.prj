@@ -1,0 +1,23 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../zedmulti.ip_user_files/bd/cga_bold_rom_reduced/sim/cga_bold_rom_reduced.vhd" \
+"../../../../../Components/M6502/T65_Pack.vhd" \
+"../../../../../Components/M6502/T65.vhd" \
+"../../../../../Components/M6502/T65_ALU.vhd" \
+"../../../../../Components/M6502/T65_MCode.vhd" \
+"../../../../zedmulti.srcs/sources_1/bd/cga_bold_rom_reduced/hdl/cga_bold_rom_reduced_wrapper.vhd" \
+"../../../../zedmulti.srcs/sources_1/imports/fpga/clk.vhd" \
+
+vhdl2008 xil_defaultlib  \
+"../../../../zedmulti.srcs/sources_1/imports/mem/rom.vhd" \
+"../../../../zedmulti.srcs/sources_1/imports/mem/ram.vhd" \
+"../../../../zedmulti.srcs/sources_1/imports/mem/dmem.vhd" \
+"../../../../zedmulti.srcs/sources_1/imports/TERMINAL/SBCTextDisplayRGB.vhd" \
+"../../../../zedmulti.srcs/sources_1/imports/Microcomputer/Microcomputer.vhd" \
+"../../../../zedmulti.srcs/sources_1/new/multicomp_wrapper.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../../zedmulti.srcs/sim_1/imports/main/main_tb.vhd" \
+
+# Do not sort compile order
+nosort

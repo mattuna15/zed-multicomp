@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"cga_bold_rom_reduced": {
+			"proto_instances": {
+			}
+		}
+	}
+}

@@ -1,0 +1,303 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Wed Jun 17 12:52:10 2020
+| Host         : DESKTOP-ID021MN running 64-bit major release  (build 9200)
+| Command      : report_methodology -file multicomp_wrapper_methodology_drc_routed.rpt -pb multicomp_wrapper_methodology_drc_routed.pb -rpx multicomp_wrapper_methodology_drc_routed.rpx
+| Design       : multicomp_wrapper
+| Device       : xc7z020clg484-1
+| Speed File   : -1
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 53
++-----------+------------------+--------------------------------------------+------------+
+| Rule      | Severity         | Description                                | Violations |
++-----------+------------------+--------------------------------------------+------------+
+| TIMING-14 | Critical Warning | LUT on the clock tree                      | 3          |
+| SYNTH-6   | Warning          | Timing of a block RAM might be sub-optimal | 11         |
+| SYNTH-11  | Warning          | DSP output not registered                  | 4          |
+| TIMING-16 | Warning          | Large setup violation                      | 35         |
++-----------+------------------+--------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-14#1 Critical Warning
+LUT on the clock tree  
+The LUT computer/cpu1/controlReg[7]_i_2 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#2 Critical Warning
+LUT on the clock tree  
+The LUT computer/cpu1/kbReadPointer[2]_i_2 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#3 Critical Warning
+LUT on the clock tree  
+The LUT computer/cpu1/kbReadPointer[2]_i_5 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+SYNTH-6#1 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance computer/io1/GEN_2KRAM.dispCharRam/mem_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#2 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance computer/ram1/mem_reg_1_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#3 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance computer/ram1/mem_reg_1_1, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#4 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance computer/ram1/mem_reg_1_2, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#5 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance computer/ram1/mem_reg_1_3, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#6 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance computer/ram1/mem_reg_1_4, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#7 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance computer/ram1/mem_reg_1_5, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#8 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance computer/ram1/mem_reg_1_6, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#9 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance computer/ram1/mem_reg_1_7, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#10 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance computer/rom1/data_reg_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#11 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance computer/rom1/data_reg_1, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-11#1 Warning
+DSP output not registered  
+DSP instance computer/io1/cursAddr1 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#2 Warning
+DSP output not registered  
+DSP instance computer/io1/cursAddr1__0 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#3 Warning
+DSP output not registered  
+DSP instance computer/io1/dispAddr1 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#4 Warning
+DSP output not registered  
+DSP instance computer/io1/dispAddr1__0 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -1.004 ns between computer/io1/dispByteLatch_reg[5]/C (clocked by vga_clk_wiz_0) and computer/io1/cursAddr1/CEA2 (clocked by eth_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -1.005 ns between computer/cpu1/IR_reg[0]/C (clocked by vga_clk_wiz_0) and computer/ram1/mem_reg_0_3/ADDRBWRADDR[7] (clocked by eth_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -1.006 ns between computer/cpu1/IR_reg[0]/C (clocked by vga_clk_wiz_0) and computer/ram1/mem_reg_1_3/ADDRBWRADDR[5] (clocked by eth_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -1.012 ns between computer/cpu1/IR_reg[0]/C (clocked by vga_clk_wiz_0) and computer/ram1/mem_reg_1_6/ADDRBWRADDR[4] (clocked by eth_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -1.015 ns between computer/io1/dispByteLatch_reg[5]/C (clocked by vga_clk_wiz_0) and computer/io1/cursAddr1__0/B[2] (clocked by eth_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -1.032 ns between computer/io1/dispByteLatch_reg[5]/C (clocked by vga_clk_wiz_0) and computer/io1/cursorHoriz_reg[3]/D (clocked by eth_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -1.060 ns between computer/cpu1/IR_reg[0]/C (clocked by vga_clk_wiz_0) and computer/ram1/mem_reg_1_3/ADDRBWRADDR[7] (clocked by eth_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -1.066 ns between computer/cpu1/IR_reg[0]/C (clocked by vga_clk_wiz_0) and computer/ram1/mem_reg_1_4/ADDRBWRADDR[5] (clocked by eth_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#9 Warning
+Large setup violation  
+There is a large setup violation of -1.147 ns between computer/cpu1/IR_reg[0]/C (clocked by vga_clk_wiz_0) and computer/ram1/mem_reg_1_6/ADDRBWRADDR[2] (clocked by eth_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#10 Warning
+Large setup violation  
+There is a large setup violation of -1.169 ns between computer/cpu1/IR_reg[0]/C (clocked by vga_clk_wiz_0) and computer/ram1/mem_reg_1_1/ADDRBWRADDR[1] (clocked by eth_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#11 Warning
+Large setup violation  
+There is a large setup violation of -1.235 ns between computer/cpu1/IR_reg[0]/C (clocked by vga_clk_wiz_0) and computer/ram1/mem_reg_1_5/ADDRBWRADDR[5] (clocked by eth_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#12 Warning
+Large setup violation  
+There is a large setup violation of -1.241 ns between computer/cpu1/IR_reg[0]/C (clocked by vga_clk_wiz_0) and computer/ram1/mem_reg_0_1/ADDRBWRADDR[7] (clocked by eth_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#13 Warning
+Large setup violation  
+There is a large setup violation of -1.272 ns between computer/cpu1/IR_reg[0]/C (clocked by vga_clk_wiz_0) and computer/ram1/mem_reg_0_3/ADDRBWRADDR[1] (clocked by eth_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#14 Warning
+Large setup violation  
+There is a large setup violation of -1.365 ns between computer/io1/dispByteLatch_reg[5]/C (clocked by vga_clk_wiz_0) and computer/io1/cursorHoriz_reg[2]/D (clocked by eth_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#15 Warning
+Large setup violation  
+There is a large setup violation of -1.570 ns between computer/cpu1/IR_reg[0]/C (clocked by vga_clk_wiz_0) and computer/ram1/mem_reg_0_5/ADDRBWRADDR[5] (clocked by eth_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#16 Warning
+Large setup violation  
+There is a large setup violation of -1.583 ns between computer/cpu1/IR_reg[0]/C (clocked by vga_clk_wiz_0) and computer/ram1/mem_reg_1_1/ADDRBWRADDR[7] (clocked by eth_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#17 Warning
+Large setup violation  
+There is a large setup violation of -1.607 ns between computer/cpu1/IR_reg[0]/C (clocked by vga_clk_wiz_0) and computer/ram1/mem_reg_1_2/ADDRBWRADDR[1] (clocked by eth_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#18 Warning
+Large setup violation  
+There is a large setup violation of -1.626 ns between computer/cpu1/IR_reg[0]/C (clocked by vga_clk_wiz_0) and computer/ram1/mem_reg_1_5/ADDRBWRADDR[7] (clocked by eth_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#19 Warning
+Large setup violation  
+There is a large setup violation of -1.790 ns between computer/cpu1/IR_reg[0]/C (clocked by vga_clk_wiz_0) and computer/ram1/mem_reg_0_5/ADDRBWRADDR[2] (clocked by eth_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#20 Warning
+Large setup violation  
+There is a large setup violation of -1.961 ns between computer/cpu1/IR_reg[0]/C (clocked by vga_clk_wiz_0) and computer/ram1/mem_reg_0_5/ADDRBWRADDR[7] (clocked by eth_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#21 Warning
+Large setup violation  
+There is a large setup violation of -10.241 ns between computer/io1/dispAddr1/CLK (clocked by eth_clk_wiz_0) and computer/io1/GEN_2KRAM.dispCharRam/mem_reg/ADDRBWRADDR[7] (clocked by eth_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#22 Warning
+Large setup violation  
+There is a large setup violation of -10.403 ns between computer/io1/dispAddr1/CLK (clocked by eth_clk_wiz_0) and computer/io1/GEN_2KRAM.dispCharRam/mem_reg/ADDRBWRADDR[9] (clocked by eth_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#23 Warning
+Large setup violation  
+There is a large setup violation of -10.467 ns between computer/io1/dispAddr1/CLK (clocked by eth_clk_wiz_0) and computer/io1/GEN_2KRAM.dispCharRam/mem_reg/ADDRBWRADDR[13] (clocked by eth_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#24 Warning
+Large setup violation  
+There is a large setup violation of -10.554 ns between computer/io1/dispAddr1/CLK (clocked by eth_clk_wiz_0) and computer/io1/GEN_2KRAM.dispCharRam/mem_reg/ADDRBWRADDR[8] (clocked by eth_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#25 Warning
+Large setup violation  
+There is a large setup violation of -10.651 ns between computer/io1/dispAddr1/CLK (clocked by eth_clk_wiz_0) and computer/io1/GEN_2KRAM.dispCharRam/mem_reg/ADDRBWRADDR[10] (clocked by eth_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#26 Warning
+Large setup violation  
+There is a large setup violation of -10.721 ns between computer/io1/dispAddr1/CLK (clocked by eth_clk_wiz_0) and computer/io1/GEN_2KRAM.dispCharRam/mem_reg/ADDRBWRADDR[11] (clocked by eth_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#27 Warning
+Large setup violation  
+There is a large setup violation of -10.753 ns between computer/io1/cursAddr1/CLK (clocked by eth_clk_wiz_0) and computer/io1/GEN_2KRAM.dispCharRam/mem_reg/ADDRARDADDR[10] (clocked by eth_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#28 Warning
+Large setup violation  
+There is a large setup violation of -10.764 ns between computer/io1/cursAddr1/CLK (clocked by eth_clk_wiz_0) and computer/io1/GEN_2KRAM.dispCharRam/mem_reg/ADDRARDADDR[12] (clocked by eth_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#29 Warning
+Large setup violation  
+There is a large setup violation of -10.777 ns between computer/io1/dispAddr1/CLK (clocked by eth_clk_wiz_0) and computer/io1/GEN_2KRAM.dispCharRam/mem_reg/ADDRBWRADDR[12] (clocked by eth_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#30 Warning
+Large setup violation  
+There is a large setup violation of -10.873 ns between computer/io1/cursAddr1/CLK (clocked by eth_clk_wiz_0) and computer/io1/GEN_2KRAM.dispCharRam/mem_reg/ADDRARDADDR[9] (clocked by eth_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#31 Warning
+Large setup violation  
+There is a large setup violation of -10.894 ns between computer/io1/cursAddr1/CLK (clocked by eth_clk_wiz_0) and computer/io1/GEN_2KRAM.dispCharRam/mem_reg/ADDRARDADDR[13] (clocked by eth_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#32 Warning
+Large setup violation  
+There is a large setup violation of -10.903 ns between computer/io1/cursAddr1/CLK (clocked by eth_clk_wiz_0) and computer/io1/GEN_2KRAM.dispCharRam/mem_reg/ADDRARDADDR[7] (clocked by eth_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#33 Warning
+Large setup violation  
+There is a large setup violation of -11.015 ns between computer/io1/cursAddr1/CLK (clocked by eth_clk_wiz_0) and computer/io1/GEN_2KRAM.dispCharRam/mem_reg/ADDRARDADDR[11] (clocked by eth_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#34 Warning
+Large setup violation  
+There is a large setup violation of -11.025 ns between computer/io1/cursAddr1/CLK (clocked by eth_clk_wiz_0) and computer/io1/GEN_2KRAM.dispCharRam/mem_reg/ADDRARDADDR[8] (clocked by eth_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#35 Warning
+Large setup violation  
+There is a large setup violation of -2.131 ns between computer/cpu1/IR_reg[0]/C (clocked by vga_clk_wiz_0) and computer/ram1/mem_reg_1_5/ADDRBWRADDR[2] (clocked by eth_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+

@@ -1,0 +1,857 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Jun 17 12:46:15 2020
+# Process ID: 14504
+# Current directory: D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.runs/synth_1
+# Command line: vivado.exe -log multicomp_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source multicomp_wrapper.tcl
+# Log file: D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.runs/synth_1/multicomp_wrapper.vds
+# Journal file: D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source multicomp_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/xilinx/Downloads/xilinxmulti/xilinxmulti.srcs/sources_1/bd/cga_bold_rom_reduced/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/xilinx/Vivado/2019.2/data/ip'.
+Command: synth_design -top multicomp_wrapper -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 7804 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 947.488 ; gain = 234.707
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'multicomp_wrapper' [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/new/multicomp_wrapper.vhd:53]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0_clk_wiz' [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/imports/fpga/clk.vhd:84]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 10.500000 - type: double 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: double 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 21.000000 - type: double 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT0_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT1_DIVIDE bound to: 42 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT1_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT2_DIVIDE bound to: 25 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT2_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT3_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT4_CASCADE bound to: 0 - type: bool 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT4_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT5_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT6_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PSEN_INVERTED bound to: 1'b0 
+	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: double 
+	Parameter REF_JITTER2 bound to: 0.000000 - type: double 
+	Parameter SS_EN bound to: FALSE - type: string 
+	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
+	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
+	Parameter STARTUP_WAIT bound to: 0 - type: bool 
+INFO: [Synth 8-113] binding component instance 'mmcm_adv_inst' to cell 'MMCME2_ADV' [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/imports/fpga/clk.vhd:128]
+INFO: [Synth 8-113] binding component instance 'clkf_buf' to cell 'BUFG' [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/imports/fpga/clk.vhd:198]
+INFO: [Synth 8-113] binding component instance 'clkout1_buf' to cell 'BUFG' [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/imports/fpga/clk.vhd:204]
+INFO: [Synth 8-113] binding component instance 'clkout2_buf' to cell 'BUFG' [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/imports/fpga/clk.vhd:209]
+INFO: [Synth 8-113] binding component instance 'clkout3_buf' to cell 'BUFG' [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/imports/fpga/clk.vhd:214]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0_clk_wiz' (1#1) [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/imports/fpga/clk.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'Microcomputer' [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/imports/Microcomputer/Microcomputer.vhd:47]
+INFO: [Synth 8-638] synthesizing module 'T65' [D:/xilinx/Downloads/Multicomp/Components/M6502/T65.vhd:97]
+INFO: [Synth 8-3491] module 'T65_MCode' declared at 'D:/xilinx/Downloads/Multicomp/Components/M6502/T65_MCode.vhd:70' bound to instance 'mcode' of component 'T65_MCode' [D:/xilinx/Downloads/Multicomp/Components/M6502/T65.vhd:188]
+INFO: [Synth 8-638] synthesizing module 'T65_MCode' [D:/xilinx/Downloads/Multicomp/Components/M6502/T65_MCode.vhd:104]
+INFO: [Synth 8-226] default block is never used [D:/xilinx/Downloads/Multicomp/Components/M6502/T65_MCode.vhd:206]
+INFO: [Synth 8-256] done synthesizing module 'T65_MCode' (2#1) [D:/xilinx/Downloads/Multicomp/Components/M6502/T65_MCode.vhd:104]
+INFO: [Synth 8-3491] module 'T65_ALU' declared at 'D:/xilinx/Downloads/Multicomp/Components/M6502/T65_ALU.vhd:64' bound to instance 'alu' of component 'T65_ALU' [D:/xilinx/Downloads/Multicomp/Components/M6502/T65.vhd:221]
+INFO: [Synth 8-638] synthesizing module 'T65_ALU' [D:/xilinx/Downloads/Multicomp/Components/M6502/T65_ALU.vhd:76]
+INFO: [Synth 8-256] done synthesizing module 'T65_ALU' (3#1) [D:/xilinx/Downloads/Multicomp/Components/M6502/T65_ALU.vhd:76]
+WARNING: [Synth 8-6014] Unused sequential element D_reg was removed.  [D:/xilinx/Downloads/Multicomp/Components/M6502/T65.vhd:238]
+WARNING: [Synth 8-6014] Unused sequential element B_o_reg was removed.  [D:/xilinx/Downloads/Multicomp/Components/M6502/T65.vhd:403]
+INFO: [Synth 8-256] done synthesizing module 'T65' (4#1) [D:/xilinx/Downloads/Multicomp/Components/M6502/T65.vhd:97]
+INFO: [Synth 8-638] synthesizing module 'rom' [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/imports/mem/rom.vhd:34]
+	Parameter G_INIT_FILE bound to: D:/xilinx/Downloads/Multicomp/ROMS/6502/basic_rom.hex - type: string 
+	Parameter G_ADDR_BITS bound to: 13 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'rom' (5#1) [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/imports/mem/rom.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'ram' [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/imports/mem/ram.vhd:38]
+	Parameter G_ADDR_BITS bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ram' (6#1) [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/imports/mem/ram.vhd:38]
+INFO: [Synth 8-638] synthesizing module 'SBCTextDisplayRGB' [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/imports/TERMINAL/SBCTextDisplayRGB.vhd:83]
+	Parameter EXTENDED_CHARSET bound to: 0 - type: integer 
+	Parameter COLOUR_ATTS_ENABLED bound to: 0 - type: integer 
+	Parameter CLOCKS_PER_SCANLINE bound to: 1600 - type: integer 
+	Parameter DISPLAY_LEFT_CLOCK bound to: 288 - type: integer 
+	Parameter HSYNC_CLOCKS bound to: 192 - type: integer 
+	Parameter CLOCKS_PER_PIXEL bound to: 2 - type: integer 
+	Parameter DISPLAY_TOP_SCANLINE bound to: 75 - type: integer 
+	Parameter VERT_SCANLINES bound to: 525 - type: integer 
+	Parameter VSYNC_SCANLINES bound to: 2 - type: integer 
+	Parameter VERT_PIXEL_SCANLINES bound to: 2 - type: integer 
+	Parameter H_SYNC_ACTIVE bound to: 1'b0 
+	Parameter V_SYNC_ACTIVE bound to: 1'b0 
+	Parameter VERT_CHARS bound to: 25 - type: integer 
+	Parameter HORIZ_CHARS bound to: 80 - type: integer 
+	Parameter DEFAULT_ATT bound to: 8'b00001111 
+	Parameter ANSI_DEFAULT_ATT bound to: 8'b00000111 
+INFO: [Synth 8-638] synthesizing module 'cga_bold_rom_reduced_wrapper' [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/bd/cga_bold_rom_reduced/hdl/cga_bold_rom_reduced_wrapper.vhd:22]
+INFO: [Synth 8-3491] module 'cga_bold_rom_reduced' declared at 'D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/bd/cga_bold_rom_reduced/synth/cga_bold_rom_reduced.vhd:14' bound to instance 'cga_bold_rom_reduced_i' of component 'cga_bold_rom_reduced' [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/bd/cga_bold_rom_reduced/hdl/cga_bold_rom_reduced_wrapper.vhd:31]
+INFO: [Synth 8-638] synthesizing module 'cga_bold_rom_reduced' [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/bd/cga_bold_rom_reduced/synth/cga_bold_rom_reduced.vhd:26]
+INFO: [Synth 8-3491] module 'cga_bold_rom_reduced_blk_mem_gen_0_0' declared at 'D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.runs/synth_1/.Xil/Vivado-14504-DESKTOP-ID021MN/realtime/cga_bold_rom_reduced_blk_mem_gen_0_0_stub.vhdl:5' bound to instance 'blk_mem_gen_0' of component 'cga_bold_rom_reduced_blk_mem_gen_0_0' [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/bd/cga_bold_rom_reduced/synth/cga_bold_rom_reduced.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'cga_bold_rom_reduced_blk_mem_gen_0_0' [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.runs/synth_1/.Xil/Vivado-14504-DESKTOP-ID021MN/realtime/cga_bold_rom_reduced_blk_mem_gen_0_0_stub.vhdl:14]
+INFO: [Synth 8-256] done synthesizing module 'cga_bold_rom_reduced' (7#1) [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/bd/cga_bold_rom_reduced/synth/cga_bold_rom_reduced.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'cga_bold_rom_reduced_wrapper' (8#1) [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/bd/cga_bold_rom_reduced/hdl/cga_bold_rom_reduced_wrapper.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'dmem' [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/imports/mem/dmem.vhd:29]
+	Parameter G_ADDR_BITS bound to: 11 - type: integer 
+	Parameter G_INIT_VAL bound to: 8'b00000000 
+INFO: [Synth 8-256] done synthesizing module 'dmem' (9#1) [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/imports/mem/dmem.vhd:29]
+WARNING: [Synth 8-3848] Net dispAttRDData in module/entity SBCTextDisplayRGB does not have driver. [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/imports/TERMINAL/SBCTextDisplayRGB.vhd:142]
+INFO: [Synth 8-256] done synthesizing module 'SBCTextDisplayRGB' (10#1) [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/imports/TERMINAL/SBCTextDisplayRGB.vhd:83]
+INFO: [Synth 8-256] done synthesizing module 'Microcomputer' (11#1) [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/imports/Microcomputer/Microcomputer.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'multicomp_wrapper' (12#1) [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/new/multicomp_wrapper.vhd:53]
+WARNING: [Synth 8-3331] design T65_ALU has unconnected port Mode[1]
+WARNING: [Synth 8-3331] design T65_ALU has unconnected port Mode[0]
+WARNING: [Synth 8-3331] design T65_MCode has unconnected port P[5]
+WARNING: [Synth 8-3331] design T65_MCode has unconnected port P[4]
+WARNING: [Synth 8-3331] design T65_MCode has unconnected port P[3]
+WARNING: [Synth 8-3331] design T65_MCode has unconnected port P[2]
+WARNING: [Synth 8-3331] design T65 has unconnected port Abort_n
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 1084.652 ; gain = 371.871
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 1084.652 ; gain = 371.871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 1084.652 ; gain = 371.871
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.066 . Memory (MB): peak = 1084.652 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/bd/cga_bold_rom_reduced/ip/cga_bold_rom_reduced_blk_mem_gen_0_0/cga_bold_rom_reduced_blk_mem_gen_0_0/cga_bold_rom_reduced_blk_mem_gen_0_0_in_context.xdc] for cell 'computer/io1/GEN_REDUCED_CHARS.fontRom/cga_bold_rom_reduced_i/blk_mem_gen_0'
+Finished Parsing XDC File [d:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/bd/cga_bold_rom_reduced/ip/cga_bold_rom_reduced_blk_mem_gen_0_0/cga_bold_rom_reduced_blk_mem_gen_0_0/cga_bold_rom_reduced_blk_mem_gen_0_0_in_context.xdc] for cell 'computer/io1/GEN_REDUCED_CHARS.fontRom/cga_bold_rom_reduced_i/blk_mem_gen_0'
+Parsing XDC File [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc]
+Finished Parsing XDC File [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/constrs_1/imports/ep08_-_ALU/comp.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/multicomp_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/multicomp_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.runs/synth_1/dont_touch.xdc]
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1183.313 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1183.313 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:02 ; elapsed = 00:01:04 . Memory (MB): peak = 1183.313 ; gain = 470.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:02 ; elapsed = 00:01:04 . Memory (MB): peak = 1183.313 ; gain = 470.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for computer/io1/\GEN_REDUCED_CHARS.fontRom /cga_bold_rom_reduced_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for computer/io1/\GEN_REDUCED_CHARS.fontRom /cga_bold_rom_reduced_i/blk_mem_gen_0. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:02 ; elapsed = 00:01:04 . Memory (MB): peak = 1183.313 ; gain = 470.531
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "ALU_Op" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ALU_Op" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/xilinx/Downloads/Multicomp/Components/M6502/T65_ALU.vhd:180]
+INFO: [Synth 8-4471] merging register 'DBR_reg[7:0]' into 'PBR_reg[7:0]' [D:/xilinx/Downloads/Multicomp/Components/M6502/T65.vhd:240]
+INFO: [Synth 8-4471] merging register 'MF_i_reg' into 'EF_i_reg' [D:/xilinx/Downloads/Multicomp/Components/M6502/T65.vhd:181]
+INFO: [Synth 8-4471] merging register 'XF_i_reg' into 'EF_i_reg' [D:/xilinx/Downloads/Multicomp/Components/M6502/T65.vhd:182]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/xilinx/Downloads/Multicomp/Components/M6502/T65.vhd:289]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/xilinx/Downloads/Multicomp/Components/M6502/T65.vhd:311]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/xilinx/Downloads/Multicomp/Components/M6502/T65.vhd:433]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/xilinx/Downloads/Multicomp/Components/M6502/T65.vhd:451]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/xilinx/Downloads/Multicomp/Components/M6502/T65.vhd:450]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/imports/TERMINAL/SBCTextDisplayRGB.vhd:610]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:07 ; elapsed = 00:01:09 . Memory (MB): peak = 1183.313 ; gain = 470.531
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     31 Bit       Adders := 2     
+	   2 Input     26 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 2     
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 6     
+	   3 Input      7 Bit       Adders := 2     
+	   2 Input      7 Bit       Adders := 5     
+	   2 Input      6 Bit       Adders := 5     
+	   3 Input      6 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 13    
+	   3 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 3     
+	   3 Input      4 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 9     
++---XORs : 
+	   2 Input      8 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	               16 Bit    Registers := 5     
+	               13 Bit    Registers := 2     
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 27    
+	                7 Bit    Registers := 13    
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 5     
+	                4 Bit    Registers := 5     
+	                3 Bit    Registers := 4     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 37    
++---Multipliers : 
+	                 5x31  Multipliers := 2     
++---RAMs : 
+	             512K Bit         RAMs := 1     
+	              16K Bit         RAMs := 1     
+	               56 Bit         RAMs := 1     
++---ROMs : 
+	                              ROMs := 3     
++---Muxes : 
+	   4 Input     24 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 7     
+	   4 Input     16 Bit        Muxes := 2     
+	   2 Input     13 Bit        Muxes := 21    
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 5     
+	   4 Input      9 Bit        Muxes := 2     
+	   3 Input      9 Bit        Muxes := 1     
+	   7 Input      8 Bit        Muxes := 2     
+	   5 Input      8 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 81    
+	   8 Input      8 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	  16 Input      8 Bit        Muxes := 3     
+	   6 Input      8 Bit        Muxes := 1     
+	  14 Input      8 Bit        Muxes := 1     
+	   3 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 28    
+	  16 Input      7 Bit        Muxes := 2     
+	   5 Input      7 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 22    
+	   2 Input      4 Bit        Muxes := 12    
+	   4 Input      4 Bit        Muxes := 2     
+	   3 Input      4 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 1     
+	   6 Input      4 Bit        Muxes := 1     
+	  16 Input      3 Bit        Muxes := 4     
+	   2 Input      3 Bit        Muxes := 11    
+	   3 Input      3 Bit        Muxes := 3     
+	  13 Input      3 Bit        Muxes := 3     
+	   8 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 2     
+	   5 Input      3 Bit        Muxes := 3     
+	  15 Input      3 Bit        Muxes := 1     
+	  12 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 25    
+	   3 Input      2 Bit        Muxes := 2     
+	   6 Input      2 Bit        Muxes := 12    
+	   4 Input      2 Bit        Muxes := 8     
+	   7 Input      2 Bit        Muxes := 8     
+	   8 Input      2 Bit        Muxes := 3     
+	  16 Input      2 Bit        Muxes := 3     
+	   5 Input      2 Bit        Muxes := 1     
+	  11 Input      2 Bit        Muxes := 1     
+	  13 Input      2 Bit        Muxes := 4     
+	  15 Input      2 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 24    
+	   2 Input      1 Bit        Muxes := 181   
+	   3 Input      1 Bit        Muxes := 10    
+	   4 Input      1 Bit        Muxes := 20    
+	   7 Input      1 Bit        Muxes := 15    
+	   5 Input      1 Bit        Muxes := 11    
+	   8 Input      1 Bit        Muxes := 5     
+	  13 Input      1 Bit        Muxes := 13    
+	  16 Input      1 Bit        Muxes := 25    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module T65_MCode 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 5     
+	   4 Input      4 Bit        Muxes := 2     
+	   3 Input      4 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 1     
+	  16 Input      3 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 6     
+	   3 Input      3 Bit        Muxes := 2     
+	  13 Input      3 Bit        Muxes := 3     
+	   8 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 20    
+	   3 Input      2 Bit        Muxes := 2     
+	   6 Input      2 Bit        Muxes := 12    
+	   4 Input      2 Bit        Muxes := 8     
+	   7 Input      2 Bit        Muxes := 8     
+	   8 Input      2 Bit        Muxes := 3     
+	  16 Input      2 Bit        Muxes := 3     
+	   5 Input      2 Bit        Muxes := 1     
+	  11 Input      2 Bit        Muxes := 1     
+	  13 Input      2 Bit        Muxes := 4     
+	   6 Input      1 Bit        Muxes := 22    
+	   2 Input      1 Bit        Muxes := 39    
+	   3 Input      1 Bit        Muxes := 5     
+	   4 Input      1 Bit        Muxes := 18    
+	   7 Input      1 Bit        Muxes := 15    
+	   5 Input      1 Bit        Muxes := 8     
+	   8 Input      1 Bit        Muxes := 4     
+	  13 Input      1 Bit        Muxes := 13    
+	  16 Input      1 Bit        Muxes := 9     
+Module T65_ALU 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   3 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 4     
+	   3 Input      6 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 3     
++---XORs : 
+	   2 Input      8 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 3     
++---Muxes : 
+	   7 Input      8 Bit        Muxes := 1     
+	   5 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 3     
+	  15 Input      3 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	  15 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module T65 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 2     
+	   2 Input      9 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 5     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 8     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   4 Input     24 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 7     
+	   4 Input     16 Bit        Muxes := 2     
+	   2 Input      9 Bit        Muxes := 5     
+	   4 Input      9 Bit        Muxes := 2     
+	   3 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 33    
+	   5 Input      8 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	   6 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+Module rom 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module ram 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---RAMs : 
+	             512K Bit         RAMs := 1     
+Module dmem 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 2     
++---RAMs : 
+	              16K Bit         RAMs := 1     
+Module SBCTextDisplayRGB 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     31 Bit       Adders := 2     
+	   2 Input     26 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 3     
+	   2 Input      7 Bit       Adders := 5     
+	   3 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 10    
+	   3 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 3     
+	   3 Input      4 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 8     
++---Registers : 
+	               13 Bit    Registers := 2     
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 15    
+	                7 Bit    Registers := 13    
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 5     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 28    
++---Multipliers : 
+	                 5x31  Multipliers := 2     
++---RAMs : 
+	               56 Bit         RAMs := 1     
++---ROMs : 
+	                              ROMs := 2     
++---Muxes : 
+	   2 Input     13 Bit        Muxes := 21    
+	   2 Input     11 Bit        Muxes := 1     
+	  16 Input      8 Bit        Muxes := 3     
+	   6 Input      8 Bit        Muxes := 1     
+	   7 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 45    
+	  14 Input      8 Bit        Muxes := 1     
+	   3 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 26    
+	  16 Input      7 Bit        Muxes := 2     
+	   5 Input      7 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 19    
+	   6 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 6     
+	   2 Input      3 Bit        Muxes := 4     
+	  12 Input      3 Bit        Muxes := 1     
+	  16 Input      3 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 130   
+	   3 Input      1 Bit        Muxes := 5     
+	  16 Input      1 Bit        Muxes := 16    
+	   4 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 3     
+	   8 Input      1 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 1     
+Module Microcomputer 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-4471] merging register 'dispByteLatch_reg[7:0]' into 'dispByteLatch_reg[7:0]' [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/imports/TERMINAL/SBCTextDisplayRGB.vhd:579]
+INFO: [Synth 8-4471] merging register 'param4_reg[6:0]' into 'param4_reg[6:0]' [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/imports/TERMINAL/SBCTextDisplayRGB.vhd:825]
+INFO: [Synth 8-4471] merging register 'dispByteLatch_reg[7:0]' into 'dispByteLatch_reg[7:0]' [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/imports/TERMINAL/SBCTextDisplayRGB.vhd:579]
+INFO: [Synth 8-4471] merging register 'param3_reg[6:0]' into 'param3_reg[6:0]' [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/imports/TERMINAL/SBCTextDisplayRGB.vhd:824]
+INFO: [Synth 8-4471] merging register 'dispByteLatch_reg[7:0]' into 'dispByteLatch_reg[7:0]' [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/imports/TERMINAL/SBCTextDisplayRGB.vhd:579]
+INFO: [Synth 8-4471] merging register 'param2_reg[6:0]' into 'param2_reg[6:0]' [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/imports/TERMINAL/SBCTextDisplayRGB.vhd:823]
+INFO: [Synth 8-4471] merging register 'dispByteLatch_reg[7:0]' into 'dispByteLatch_reg[7:0]' [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/imports/TERMINAL/SBCTextDisplayRGB.vhd:579]
+INFO: [Synth 8-4471] merging register 'param1_reg[6:0]' into 'param1_reg[6:0]' [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/imports/TERMINAL/SBCTextDisplayRGB.vhd:822]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/imports/TERMINAL/SBCTextDisplayRGB.vhd:373]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/imports/TERMINAL/SBCTextDisplayRGB.vhd:372]
+DSP Report: Generating DSP cursAddr1, operation Mode is: (A:0x50)*B2.
+DSP Report: register cursAddr1 is absorbed into DSP cursAddr1.
+DSP Report: operator cursAddr1 is absorbed into DSP cursAddr1.
+DSP Report: operator cursAddr1 is absorbed into DSP cursAddr1.
+DSP Report: Generating DSP cursAddr1, operation Mode is: (PCIN>>17)+A*B2.
+DSP Report: register cursAddr1 is absorbed into DSP cursAddr1.
+DSP Report: operator cursAddr1 is absorbed into DSP cursAddr1.
+DSP Report: operator cursAddr1 is absorbed into DSP cursAddr1.
+DSP Report: Generating DSP dispAddr1, operation Mode is: (A:0x50)*B2.
+DSP Report: register dispAddr1 is absorbed into DSP dispAddr1.
+DSP Report: operator dispAddr1 is absorbed into DSP dispAddr1.
+DSP Report: operator dispAddr1 is absorbed into DSP dispAddr1.
+DSP Report: Generating DSP dispAddr1, operation Mode is: (PCIN>>17)+A*B2.
+DSP Report: register dispAddr1 is absorbed into DSP dispAddr1.
+DSP Report: operator dispAddr1 is absorbed into DSP dispAddr1.
+DSP Report: operator dispAddr1 is absorbed into DSP dispAddr1.
+WARNING: [Synth 8-3331] design T65_ALU has unconnected port Mode[1]
+WARNING: [Synth 8-3331] design T65_ALU has unconnected port Mode[0]
+WARNING: [Synth 8-3331] design T65_MCode has unconnected port P[5]
+WARNING: [Synth 8-3331] design T65_MCode has unconnected port P[4]
+WARNING: [Synth 8-3331] design T65_MCode has unconnected port P[3]
+WARNING: [Synth 8-3331] design T65_MCode has unconnected port P[2]
+WARNING: [Synth 8-3331] design T65 has unconnected port Abort_n
+INFO: [Synth 8-4652] Swapped enable and write-enable on 8 RAM instances of RAM computer/ram1/mem_reg to conserve power
+WARNING: [Synth 8-3936] Found unconnected internal register 'GEN_2KRAM.dispCharRam/b_data_o_reg' and it is trimmed from '8' to '7' bits. [D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.srcs/sources_1/imports/mem/dmem.vhd:54]
+INFO: [Synth 8-3886] merging instance 'computer/cpu1/NMI_n_o_reg' (FDE) to 'computer/cpu1/SO_n_o_reg'
+INFO: [Synth 8-3886] merging instance 'computer/cpu1/IRQ_n_o_reg' (FDE) to 'computer/cpu1/SO_n_o_reg'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\computer/cpu1/NMIAct_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\computer/cpu1/SO_n_o_reg )
+INFO: [Synth 8-3886] merging instance 'computer/cpu1/Mode_r_reg[0]' (FDCE) to 'computer/cpu1/Mode_r_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\computer/cpu1/Mode_r_reg[1] )
+INFO: [Synth 8-3886] merging instance 'computer/io1/ps2WriteByte2_reg[7]' (FDRE_1) to 'computer/io1/ps2WriteByte2_reg[6]'
+INFO: [Synth 8-3886] merging instance 'computer/io1/ps2WriteByte2_reg[6]' (FDRE_1) to 'computer/io1/ps2WriteByte2_reg[5]'
+INFO: [Synth 8-3886] merging instance 'computer/io1/ps2WriteByte2_reg[5]' (FDRE_1) to 'computer/io1/ps2WriteByte2_reg[4]'
+INFO: [Synth 8-3886] merging instance 'computer/io1/ps2WriteByte2_reg[4]' (FDRE_1) to 'computer/io1/ps2WriteByte2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'computer/cpu1/P_reg[5]' (FDE) to 'computer/cpu1/P_reg[4]'
+INFO: [Synth 8-3886] merging instance 'computer/io1/ps2WriteByte_reg[7]' (FDSE_1) to 'computer/io1/ps2WriteByte_reg[6]'
+INFO: [Synth 8-3886] merging instance 'computer/io1/ps2WriteByte_reg[6]' (FDSE_1) to 'computer/io1/ps2WriteByte_reg[5]'
+INFO: [Synth 8-3886] merging instance 'computer/io1/ps2WriteByte_reg[5]' (FDSE_1) to 'computer/io1/ps2WriteByte_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\computer/io1 /i_13/\ps2WriteClkCount_reg[4] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:39 ; elapsed = 00:01:42 . Memory (MB): peak = 1183.313 ; gain = 470.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------------+------------------------+---------------+----------------+
+|Module Name       | RTL Object             | Depth x Width | Implemented As | 
++------------------+------------------------+---------------+----------------+
+|SBCTextDisplayRGB | ps2Byte_reg_rep        | 256x7         | Block RAM      | 
+|SBCTextDisplayRGB | ps2Byte_reg_rep        | 256x7         | Block RAM      | 
+|multicomp_wrapper | computer/rom1/data_reg | 8192x8        | Block RAM      | 
++------------------+------------------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping	Report (see note below)
++------------------+-------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name       | RTL Object                    | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------------+-------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|multicomp_wrapper | computer/ram1/mem_reg         | 64 K x 8(READ_FIRST)   | W |   | 64 K x 8(WRITE_FIRST)  |   | R | Port A and B     | 0      | 16     | 
+|\computer/io1     | GEN_2KRAM.dispCharRam/mem_reg | 2 K x 8(READ_FIRST)    | W | R | 2 K x 7(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
++------------------+-------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping	Report (see note below)
++---------------+--------------+-----------+----------------------+-------------+
+|Module Name    | RTL Object   | Inference | Size (Depth x Width) | Primitives  | 
++---------------+--------------+-----------+----------------------+-------------+
+|\computer/io1  | kbBuffer_reg | Implied   | 8 x 7                | RAM32M x 2	 | 
++---------------+--------------+-----------+----------------------+-------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping	Report (see note below)
++------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name       | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|SBCTextDisplayRGB | (A:0x50)*B2     | 6      | 8      | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|SBCTextDisplayRGB | (PCIN>>17)+A*B2 | 15     | 6      | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|SBCTextDisplayRGB | (A:0x50)*B2     | 6      | 8      | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|SBCTextDisplayRGB | (PCIN>>17)+A*B2 | 15     | 6      | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
++------------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:57 ; elapsed = 00:02:00 . Memory (MB): peak = 1201.285 ; gain = 488.504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:08 ; elapsed = 00:02:11 . Memory (MB): peak = 1311.094 ; gain = 598.313
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping	Report
++------------------+-------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name       | RTL Object                    | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------------+-------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|multicomp_wrapper | computer/ram1/mem_reg         | 64 K x 8(READ_FIRST)   | W |   | 64 K x 8(WRITE_FIRST)  |   | R | Port A and B     | 0      | 16     | 
+|\computer/io1     | GEN_2KRAM.dispCharRam/mem_reg | 2 K x 8(READ_FIRST)    | W | R | 2 K x 7(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
++------------------+-------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping	Report
++---------------+--------------+-----------+----------------------+-------------+
+|Module Name    | RTL Object   | Inference | Size (Depth x Width) | Primitives  | 
++---------------+--------------+-----------+----------------------+-------------+
+|\computer/io1  | kbBuffer_reg | Implied   | 8 x 7                | RAM32M x 2	 | 
++---------------+--------------+-----------+----------------------+-------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7053] The timing for the instance computer/ram1/mem_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7053] The timing for the instance computer/ram1/mem_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7053] The timing for the instance computer/ram1/mem_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7053] The timing for the instance computer/ram1/mem_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7053] The timing for the instance computer/ram1/mem_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7053] The timing for the instance computer/ram1/mem_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7053] The timing for the instance computer/ram1/mem_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7053] The timing for the instance computer/ram1/mem_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7053] The timing for the instance computer/io1/GEN_2KRAM.dispCharRam/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7053] The timing for the instance computer/io1/GEN_2KRAM.dispCharRam/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7053] The timing for the instance computer/io1/ps2Byte_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7053] The timing for the instance computer/io1/ps2Byte_reg_rep__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7053] The timing for the instance computer/rom1/data_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7053] The timing for the instance computer/rom1/data_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:10 ; elapsed = 00:02:14 . Memory (MB): peak = 1312.105 ; gain = 599.324
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6064] Net n_0_1542 is driving 64 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
+INFO: [Synth 8-6064] Net n_0_1684 is driving 34 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \computer/L [14] is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
+INFO: [Synth 8-6064] Net \computer/L [13] is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
+INFO: [Synth 8-6064] Net \computer/L [5] is driving 34 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \computer/L [12] is driving 34 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \computer/L [15] is driving 32 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
+INFO: [Synth 8-6064] Net \computer/L [9] is driving 34 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \computer/L [10] is driving 34 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \computer/L [1] is driving 34 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \computer/L [4] is driving 34 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \computer/L [2] is driving 34 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \computer/L [3] is driving 34 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \computer/L [8] is driving 34 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \computer/L [7] is driving 34 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \computer/L [6] is driving 34 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+INFO: [Synth 8-6064] Net \computer/L [11] is driving 34 big block pins (URAM, BRAM and DSP loads). Created 5 replicas of its driver. 
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:17 ; elapsed = 00:02:20 . Memory (MB): peak = 1312.105 ; gain = 599.324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:17 ; elapsed = 00:02:20 . Memory (MB): peak = 1312.105 ; gain = 599.324
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:17 ; elapsed = 00:02:20 . Memory (MB): peak = 1312.105 ; gain = 599.324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:17 ; elapsed = 00:02:20 . Memory (MB): peak = 1312.105 ; gain = 599.324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:17 ; elapsed = 00:02:21 . Memory (MB): peak = 1312.105 ; gain = 599.324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:17 ; elapsed = 00:02:21 . Memory (MB): peak = 1312.105 ; gain = 599.324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-------------------------------------+----------+
+|      |BlackBox name                        |Instances |
++------+-------------------------------------+----------+
+|1     |cga_bold_rom_reduced_blk_mem_gen_0_0 |         1|
++------+-------------------------------------+----------+
+
+Report Cell Usage: 
++------+--------------------------------------------+------+
+|      |Cell                                        |Count |
++------+--------------------------------------------+------+
+|1     |cga_bold_rom_reduced_blk_mem_gen_0_0_bbox_0 |     1|
+|2     |BUFG                                        |     4|
+|3     |CARRY4                                      |   164|
+|4     |DSP48E1                                     |     2|
+|5     |DSP48E1_1                                   |     2|
+|6     |LUT1                                        |    34|
+|7     |LUT2                                        |   317|
+|8     |LUT3                                        |   322|
+|9     |LUT4                                        |   261|
+|10    |LUT5                                        |   258|
+|11    |LUT6                                        |   715|
+|12    |MMCME2_ADV                                  |     1|
+|13    |MUXF7                                       |    14|
+|14    |RAM32M                                      |     2|
+|15    |RAMB18E1                                    |     1|
+|16    |RAMB18E1_1                                  |     1|
+|17    |RAMB18E1_2                                  |     1|
+|18    |RAMB36E1                                    |     8|
+|19    |RAMB36E1_1                                  |     8|
+|20    |RAMB36E1_2                                  |     1|
+|21    |RAMB36E1_3                                  |     1|
+|22    |FDCE                                        |    94|
+|23    |FDPE                                        |     9|
+|24    |FDRE                                        |   337|
+|25    |FDSE                                        |     3|
+|26    |IBUF                                        |     2|
+|27    |IOBUF                                       |     2|
+|28    |OBUF                                        |     8|
++------+--------------------------------------------+------+
+
+Report Instance Areas: 
++------+----------------------------------+-----------------------------+------+
+|      |Instance                          |Module                       |Cells |
++------+----------------------------------+-----------------------------+------+
+|1     |top                               |                             |  2580|
+|2     |  clk_inst                        |clk_wiz_0_clk_wiz            |     5|
+|3     |  computer                        |Microcomputer                |  2066|
+|4     |    cpu1                          |T65                          |   775|
+|5     |      alu                         |T65_ALU                      |    39|
+|6     |    io1                           |SBCTextDisplayRGB            |  1256|
+|7     |      \GEN_2KRAM.dispCharRam      |dmem                         |    41|
+|8     |      \GEN_REDUCED_CHARS.fontRom  |cga_bold_rom_reduced_wrapper |    23|
+|9     |        cga_bold_rom_reduced_i    |cga_bold_rom_reduced         |     8|
+|10    |    ram1                          |ram                          |    16|
+|11    |    rom1                          |rom                          |     2|
++------+----------------------------------+-----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:17 ; elapsed = 00:02:21 . Memory (MB): peak = 1312.105 ; gain = 599.324
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:21 ; elapsed = 00:02:16 . Memory (MB): peak = 1312.105 ; gain = 500.664
+Synthesis Optimization Complete : Time (s): cpu = 00:02:17 ; elapsed = 00:02:21 . Memory (MB): peak = 1312.105 ; gain = 599.324
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 1312.105 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 208 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 26 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1312.105 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+  RAM32M => RAM32M (inverted pins: WCLK) (RAMD32(x6), RAMS32(x2)): 2 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+122 Infos, 18 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:27 ; elapsed = 00:02:32 . Memory (MB): peak = 1312.105 ; gain = 897.313
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1312.105 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/xilinx/Downloads/Multicomp/zedmulti/zedmulti.runs/synth_1/multicomp_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file multicomp_wrapper_utilization_synth.rpt -pb multicomp_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 17 12:49:00 2020...
