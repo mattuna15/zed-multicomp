@@ -4,7 +4,7 @@ Zedboard implementation of multicomp
 Requires a ps2 pmod in JA.
 https://reference.digilentinc.com/reference/pmod/pmodps2/start
 
-Zedboard rom is located in https://github.com/mattuna15/zed-multicomp/blob/master/ROMS/6502/basic_rom.hex
+Zedboard 6502 rom is located in https://github.com/mattuna15/zed-multicomp/blob/master/ROMS/6502/basic_rom.hex
 
 The original .hex files can be converted using Srecord. 
 http://srecord.sourceforge.net/
@@ -13,11 +13,12 @@ Specify intel for input format and ascii-hex as output. Load resulting file into
 
 The resulting file then needs to be loaded into the rom file.
 
+<hr>
+Project acknowledgments: <br>
 
-Project acknowledgments
-http://searle.x10host.com/Multicomp/index.html
-https://www.retrobrewcomputers.org/doku.php?id=boards:sbc:multicomp:papilio-duo:start
-https://github.com/MJoergen/dyoc 
+http://searle.x10host.com/Multicomp/index.html<br>
+https://www.retrobrewcomputers.org/doku.php?id=boards:sbc:multicomp:papilio-duo:start<br>
+https://github.com/MJoergen/dyoc <br>
 
 License:
 
