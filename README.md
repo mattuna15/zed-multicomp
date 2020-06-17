@@ -12,6 +12,8 @@ Specify intel for input format and ascii-hex as output. Load resulting file into
 
 The resulting file then needs to be loaded into the rom file.
 
+Button C (centre button) is the reset button.
+
 <hr>
 Project acknowledgments: <br>
 
