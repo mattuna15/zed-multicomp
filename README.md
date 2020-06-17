@@ -1,8 +1,7 @@
 # zed-multicomp
-Zedboard implementation of multicomp
+Zedboard implementation of multicomp. The zedboard has enough block ram to support the full 64k using internal ram. The ram code and memory map has been amended accordingly. The VGA routines and roms are based on those from a port to the Papilio-Duo. Some of the memory and clocking routines are based on work by Michael Jørgensen.
 
-Requires a ps2 pmod in JA.
-https://reference.digilentinc.com/reference/pmod/pmodps2/start
+Requires a ps2 pmod in JA: https://reference.digilentinc.com/reference/pmod/pmodps2/start
 
 Zedboard 6502 rom is located in https://github.com/mattuna15/zed-multicomp/blob/master/ROMS/6502/basic_rom.hex
 
