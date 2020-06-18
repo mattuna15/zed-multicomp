@@ -2,7 +2,7 @@
 Zedboard implementation of multicomp. The zedboard has enough block ram to support the full 64k using internal ram. The ram code and memory map has been amended accordingly. Some of the memory and clocking routines are based on work by Michael Jørgensen.
 
 # Hardware
-Diglient Zedboard: https://store.digilentinc.com/zedboard-zynq-7000-arm-fpga-soc-development-board/
+Diglient Zedboard: https://store.digilentinc.com/zedboard-zynq-7000-arm-fpga-soc-development-board/ <br>
 Requires a ps2 pmod in JA: https://reference.digilentinc.com/reference/pmod/pmodps2/start
 
 Button C (centre button) is the reset button.
