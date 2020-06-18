@@ -14,6 +14,8 @@ The resulting file then needs to be loaded into the rom file.
 
 Button C (centre button) is the reset button.
 
+NB You have full access to all RAM - max 56K
+
 <hr>
 Project acknowledgments: <br>
 
