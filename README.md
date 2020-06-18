@@ -3,7 +3,8 @@ Zedboard implementation of multicomp. The zedboard has enough block ram to suppo
 
 # Hardware
 Diglient Zedboard: https://store.digilentinc.com/zedboard-zynq-7000-arm-fpga-soc-development-board/ <br>
-Requires a ps2 pmod in JA: https://reference.digilentinc.com/reference/pmod/pmodps2/start
+Requires a ps2 pmod in JA: https://reference.digilentinc.com/reference/pmod/pmodps2/start<br>
+Optional SD Card pmod in JD: https://store.digilentinc.com/pmod-sd-full-sized-sd-card-slot/<br>
 
 Button C (centre button) is the reset button.
 
@@ -24,7 +25,9 @@ Specify intel for input format and ascii-hex as output. Load resulting file into
 NB 
 <ul>
 <li>You have full access to all RAM - max 56K
-<li>CPM build requires extra changes http://searle.x10host.com/Multicomp/cpm/fpgaCPM.html
+<li>CPM build requires extra changes http://searle.x10host.com/Multicomp/cpm/fpgaCPM.html<br>
+  CPM requires SD/SDHC card with CPM SD card image in pmod JD.<br>
+Demo Image available from https://obsolescence.wixsite.com/obsolescence/multicomp-fpga-cpm-demo-disk
 </ul>
 
 <hr>
