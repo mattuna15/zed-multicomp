@@ -61,6 +61,54 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sources_1/imports/Z80/T80_Pack.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Components/Z80/T80_Pack.vhd"/>
+          <Attr Name="ImportTime" Val="1592317265"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Z80/T80.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Components/Z80/T80.vhd"/>
+          <Attr Name="ImportTime" Val="1592317265"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Z80/T80_ALU.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Components/Z80/T80_ALU.vhd"/>
+          <Attr Name="ImportTime" Val="1592317265"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Z80/T80_MCode.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Components/Z80/T80_MCode.vhd"/>
+          <Attr Name="ImportTime" Val="1592317265"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Z80/T80_Reg.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Components/Z80/T80_Reg.vhd"/>
+          <Attr Name="ImportTime" Val="1592317265"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/Z80/T80s.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Components/Z80/T80s.vhd"/>
+          <Attr Name="ImportTime" Val="1592317265"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PPRDIR/../Components/UART/bufferedUART.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -71,14 +119,6 @@
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../xilinx/Downloads/nexys4ddr-master/dyoc/Episodes/ep25_-_Sample_Programs/fpga/clk.vhd"/>
           <Attr Name="ImportTime" Val="1586464698"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/M6809/cpu09l.vhd">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Components/M6809/cpu09l.vhd"/>
-          <Attr Name="ImportTime" Val="1592317265"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -131,6 +171,15 @@
       </File>
       <File Path="$PSRCDIR/sources_1/new/multicomp_wrapper.vhd">
         <FileInfo SFType="VHDL2008">
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/M6809/cpu09l.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Components/M6809/cpu09l.vhd"/>
+          <Attr Name="ImportTime" Val="1592317265"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>

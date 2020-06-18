@@ -90,30 +90,49 @@ architecture struct of Microcomputer is
 	signal serialClock				: std_logic;
 	signal sdClock						: std_logic;	
 	signal topAddress               : std_logic_vector(7 downto 0);
+	--CPM
+    signal n_RomActive : std_logic := '0';
 	
 begin
+
+--CPM
+-- Disable ROM if out 38. Re-enable when (asynchronous) reset pressed
+process (n_ioWR, n_reset) begin
+if (n_reset = '0') then
+n_RomActive <= '0';
+elsif (rising_edge(n_ioWR)) then
+if cpuAddress(7 downto 0) = "00111000" then -- $38
+n_RomActive <= '1';
+end if;
+end if;
+end process;
+
+
 -- ____________________________________________________________________________________
 -- CPU CHOICE GOES HERE
-cpu1 : entity work.cpu09
+cpu1 : entity work.t80s
+generic map(mode => 1, t2write => 1, iowait => 0)
 port map(
-clk => not(cpuClock),
-rst => not n_reset,
-rw => n_WR,
-addr => cpuAddress,
-data_in => cpuDataIn,
-data_out => cpuDataOut,
-halt => '0',
-hold => '0',
-irq => '0',
-firq => '0',
-nmi => '0');
+reset_n => n_reset,
+clk_n => cpuClock,
+wait_n => '1',
+int_n => '1',
+nmi_n => '1',
+busrq_n => '1',
+mreq_n => n_MREQ,
+iorq_n => n_IORQ,
+rd_n => n_RD,
+wr_n => n_WR,
+a => cpuAddress,
+di => cpuDataIn,
+do => cpuDataOut);
 
 -- ____________________________________________________________________________________
 -- ROM GOES HERE	
 	rom1 : entity work.rom -- 8KB BASIC
 	generic map (
 	   G_ADDR_BITS => 13,
-	   G_INIT_FILE => "D:\code\multicomp\ROMS\6809\basic_6809.hex"
+	   G_INIT_FILE => "D:\code\multicomp\ROMS\Z80\z80-CPM-basic.hex"
 	)
     port map(
         addr_i => cpuAddress(12 downto 0),
@@ -148,7 +167,6 @@ nmi => '0');
 
 -- ____________________________________________________________________________________
 -- INPUT/OUTPUT DEVICES GO HERE	
-
 io1 : entity work.SBCTextDisplayRGB
 port map (
 n_reset => n_reset,
@@ -168,8 +186,8 @@ videoB1 => videoB1,
 sync => open,
 video => open,
 
-n_wr => n_interface1CS or cpuClock or n_WR,
-n_rd => n_interface1CS or cpuClock or (not n_WR),
+n_wr => n_interface1CS or n_ioWR,
+n_rd => n_interface1CS or n_ioRD,
 n_int => n_int1,
 regSel => cpuAddress(0),
 dataIn => cpuDataOut,
@@ -181,8 +199,8 @@ ps2Data => ps2Data
 io2 : entity work.bufferedUART
 port map(
 clk => clk,
-n_wr => n_interface2CS or cpuClock or n_WR,
-n_rd => n_interface2CS or cpuClock or (not n_WR),
+n_wr => n_interface2CS or n_ioWR,
+n_rd => n_interface2CS or n_ioRD,
 n_int => n_int2,
 regSel => cpuAddress(0),
 dataIn => cpuDataOut,
@@ -202,8 +220,8 @@ sdCS => sdCS,
 sdMOSI => sdMOSI,
 sdMISO => sdMISO,
 sdSCLK => sdSCLK,
-n_wr => n_sdCardCS or cpuClock or n_WR,
-n_rd => n_sdCardCS or cpuClock or (not n_WR),
+n_wr => n_sdCardCS or n_ioWR,
+n_rd => n_sdCardCS or n_ioRD,
 n_reset => n_reset,
 dataIn => cpuDataOut,
 dataOut => sdCardDataOut,
@@ -214,17 +232,18 @@ clk => sdClock -- twice the spi clk
 	
 -- ____________________________________________________________________________________
 -- MEMORY READ/WRITE LOGIC GOES HERE
-n_memRD <= not(cpuClock) nand n_WR;
-n_memWR <= not(cpuClock) nand (not n_WR);
+n_ioWR <= n_WR or n_IORQ;
+n_memWR <= n_WR or n_MREQ;
+n_ioRD <= n_RD or n_IORQ;
+n_memRD <= n_RD or n_MREQ;
 -- ____________________________________________________________________________________
 -- CHIP SELECTS GO HERE
 
-n_basRomCS <= '0' when cpuAddress(15 downto 13) = "111" else '1'; --8K at top of memory
-n_interface1CS <= '0' when cpuAddress(15 downto 1) = "111111111101000" else '1'; -- 2 bytes FFD0-FFD1
-n_sdCardCS <= '0' when cpuAddress(15 downto 3) = "1111111111011" else '1'; -- 8 bytes FFD8-FFDF
-n_interface2CS <= '0' when cpuAddress(15 downto 1) = "111111111101001" else '1'; -- 2 bytes FFD2-FFD3
+n_basRomCS <= '0' when cpuAddress(15 downto 13) = "000" and n_RomActive = '0' else '1'; --8K at bottom of memory
+n_interface1CS <= '0' when cpuAddress(7 downto 1) = "1000000" and (n_ioWR='0' or n_ioRD = '0') else '1'; -- 2 Bytes $80-$81
+n_interface2CS <= '0' when cpuAddress(7 downto 1) = "1000001" and (n_ioWR='0' or n_ioRD = '0') else '1'; -- 2 Bytes $82-$83
+n_sdCardCS <= '0' when cpuAddress(7 downto 3) = "10001" and (n_ioWR='0' or n_ioRD = '0') else '1'; -- 8 Bytes $88-$8F
 n_internalRam1CS <= not n_basRomCS;
-
 -- ____________________________________________________________________________________
 -- BUS ISOLATION GOES HERE
 
