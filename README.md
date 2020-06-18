@@ -4,6 +4,7 @@ Zedboard implementation of multicomp. The zedboard has enough block ram to suppo
 Requires a ps2 pmod in JA: https://reference.digilentinc.com/reference/pmod/pmodps2/start
 
 Zedboard 6502 rom is located in https://github.com/mattuna15/zed-multicomp/blob/master/ROMS/6502/basic_rom.hex
+Zedboard 6809 rom is located in https://github.com/mattuna15/zed-multicomp/blob/master/ROMS/6809/basic_6809.hex
 
 The original .hex files can be converted using Srecord. 
 http://srecord.sourceforge.net/
