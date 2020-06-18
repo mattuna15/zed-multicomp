@@ -21,7 +21,7 @@ library ieee;
 entity SBCTextDisplayRGB is
 	generic(
 		constant EXTENDED_CHARSET : integer := 0; -- 1 = 256 chars, 0 = 128 chars
-		constant COLOUR_ATTS_ENABLED : integer := 0; -- 1=Colour for each character, 0=Colour applied to whole display
+		constant COLOUR_ATTS_ENABLED : integer := 1; -- 1=Colour for each character, 0=Colour applied to whole display
 		-- VGA 640x480 Default values
 		
 		constant CLOCKS_PER_SCANLINE : integer := 1600; -- NTSC/PAL = 3200
@@ -32,12 +32,12 @@ entity SBCTextDisplayRGB is
 		
 		constant DISPLAY_TOP_SCANLINE : integer := 35+40;
 		constant VERT_SCANLINES : integer := 525; -- NTSC=262, PAL=312
-		constant VSYNC_SCANLINES : integer := 2; -- NTSC/PAL = 4
+		constant VSYNC_SCANLINES : integer := 4; -- NTSC/PAL = 4
 		constant VERT_PIXEL_SCANLINES : integer := 2;
 
 		
-		constant H_SYNC_ACTIVE : std_logic := '0';
-		constant V_SYNC_ACTIVE : std_logic := '0';
+		constant H_SYNC_ACTIVE : std_logic := '1';
+		constant V_SYNC_ACTIVE : std_logic := '1';
 
 		constant VERT_CHARS : integer := 25;
 		constant HORIZ_CHARS : integer := 80;
@@ -267,12 +267,17 @@ begin
 	
 GEN_REDUCED_CHARS: if (EXTENDED_CHARSET=0) generate
 begin	
-	fontRom : entity work.cga_bold_rom_reduced_wrapper -- 128 chars (1K)
-	port map(
-		addra_0 => charAddr(9 downto 0),
-		clka_0 => clk,
-		douta_0 => charData
-	);
+	
+	fontRom : entity work.rom -- 1KB FONT ROM
+	generic map (
+	   G_ADDR_BITS => 10,
+	   G_INIT_FILE => "D:/code/multicomp/Components/TERMINAL/CGAFontBoldReduced-x.hex"
+	)
+    port map(
+        addr_i => charAddr(9 downto 0),
+        clk_i => clk,
+        data_o => charData
+    );
 
 end generate GEN_REDUCED_CHARS;
 

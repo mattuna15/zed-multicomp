@@ -45,7 +45,16 @@ port(
 		vSync			: out std_logic;
 
 		ps2Clk		: inout std_logic;
-		ps2Data		: inout std_logic
+		ps2Data		: inout std_logic;
+		sdCS			: out std_logic;
+		sdMOSI		: out std_logic;
+		sdMISO		: in std_logic;
+		sdSCLK		: out std_logic;
+		driveLED		: out std_logic :='1';
+		
+		rxd1			: in std_logic;
+		txd1			: out std_logic;
+		rts1			: out std_logic	
 
 	);
 end multicomp_wrapper;
@@ -74,6 +83,7 @@ begin
         
         n_reset	=> not reset,
 		clk	=> clk50,
+		vgaClock => clk25,
 		cpuClock => clk25,
 		videoR0	 => videoR0,
 		videoG0	=> videoG0,
@@ -85,7 +95,17 @@ begin
 		vSync	=> vSync,
 
 		ps2Clk => ps2Clk,
-		ps2Data	=> ps2Data
+		ps2Data	=> ps2Data,
+		
+		sdCS => sdCS,
+		sdMOSI => sdMOSI,
+		sdMISO => sdMISO,
+		sdSCLK => sdSCLK,
+		driveLED => driveLED,
+		
+		rxd1 => rxd1,
+		txd1 => txd1,
+		rts1 => rts1
 
     );
 

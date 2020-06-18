@@ -21,16 +21,33 @@ set_property -dict {PACKAGE_PIN Y19 IOSTANDARD LVCMOS33} [get_ports vSync]
 #NET LD7           LOC = U14  | IOSTANDARD=LVCMOS33;  # "LD7"
 
 
+
 #NET BTNC          LOC = P16  | IOSTANDARD=LVCMOS18;  # "BTNC"
 set_property -dict {PACKAGE_PIN P16 IOSTANDARD LVCMOS33} [get_ports reset]
 #JA PMOD has a ps2 pmod
 set_property -dict {PACKAGE_PIN Y11 IOSTANDARD LVCMOS33} [get_ports ps2Data] 
 set_property -dict {PACKAGE_PIN Y10 IOSTANDARD LVCMOS33} [get_ports ps2Clk]
-
-
-
 set_property PULLUP true [get_ports ps2Clk]
 set_property PULLUP true [get_ports ps2Data]
+
+#JB PMOD has a sd card pmod, led 0 is drive led
+set_property -dict {PACKAGE_PIN T22 IOSTANDARD LVCMOS33 } [get_ports driveLED]
+set_property -dict {PACKAGE_PIN W12 IOSTANDARD LVCMOS33 } [get_ports {sdCS}]
+#NET JB1           LOC = W12  | IOSTANDARD=LVCMOS33;  # "JB1"
+set_property -dict {PACKAGE_PIN W11  IOSTANDARD LVCMOS33 } [get_ports {sdMOSI}]
+#NET JB2           LOC = W11  | IOSTANDARD=LVCMOS33;  # "JB2"
+set_property -dict {PACKAGE_PIN V10  IOSTANDARD LVCMOS33 } [get_ports {sdMISO}]
+#NET JB3           LOC = V10  | IOSTANDARD=LVCMOS33;  # "JB3"
+set_property -dict {PACKAGE_PIN W8 IOSTANDARD LVCMOS33 }  [get_ports {sdSCLK}]
+#NET JB4           LOC = W8   | IOSTANDARD=LVCMOS33;  # "JB4"
+
+#UART
+set_property -dict {PACKAGE_PIN AB7 IOSTANDARD LVCMOS33 } [get_ports {rxd1}]
+#NET JC1_P         LOC = AB7  | IOSTANDARD=LVCMOS33;  # "JC1_P"
+set_property -dict {PACKAGE_PIN AB6 IOSTANDARD LVCMOS33 } [get_ports {txd1}]
+#NET JC1_N         LOC = AB6  | IOSTANDARD=LVCMOS33;  # "JC1_N"
+set_property -dict {PACKAGE_PIN Y4 IOSTANDARD LVCMOS33 } [get_ports {rts1}]
+#NET JC2_P         LOC = Y4   | IOSTANDARD=LVCMOS33;  # "JC2_P"
 
 # Configuration Bank Voltage Select
 set_property CFGBVS VCCO [current_design]

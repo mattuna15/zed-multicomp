@@ -23,6 +23,7 @@ entity Microcomputer is
 		n_reset		: in std_logic;
 		clk			: in std_logic;
 		cpuClock	: in std_logic;
+		vgaClock    : in std_logic;
 
 		videoR0		: out std_logic;
 		videoG0		: out std_logic;
@@ -34,13 +35,17 @@ entity Microcomputer is
 		vSync			: out std_logic;
 
 		ps2Clk		: inout std_logic;
-		ps2Data		: inout std_logic
+		ps2Data		: inout std_logic;
 
---		sdCS			: out std_logic;
---		sdMOSI		: out std_logic;
---		sdMISO		: in std_logic;
---		sdSCLK		: out std_logic;
---		driveLED		: out std_logic :='1'	
+		sdCS			: out std_logic;
+		sdMOSI		: out std_logic;
+		sdMISO		: in std_logic;
+		sdSCLK		: out std_logic;
+		driveLED		: out std_logic :='1';
+		
+		rxd1			: in std_logic;
+		txd1			: out std_logic;
+		rts1			: out std_logic	
 	);
 end Microcomputer;
 
@@ -111,7 +116,7 @@ DO => cpuDataOut);
 	rom1 : entity work.rom -- 8KB BASIC
 	generic map (
 	   G_ADDR_BITS => 13,
-	   G_INIT_FILE => "D:/xilinx/Downloads/Multicomp/ROMS/6502/basic_rom.hex"
+	   G_INIT_FILE => "D:/code/multicomp/ROMS/6502/basic_rom.hex"
 	)
     port map(
         addr_i => cpuAddress(12 downto 0),
@@ -175,6 +180,40 @@ dataOut => interface1DataOut,
 ps2Clk => ps2Clk,
 ps2Data => ps2Data
 );
+
+io2 : entity work.bufferedUART
+port map(
+clk => clk,
+n_wr => n_interface2CS or cpuClock or n_WR,
+n_rd => n_interface2CS or cpuClock or (not n_WR),
+n_int => n_int2,
+regSel => cpuAddress(0),
+dataIn => cpuDataOut,
+dataOut => interface2DataOut,
+rxClock => serialClock,
+txClock => serialClock,
+rxd => rxd1,
+txd => txd1,
+n_cts => '0',
+n_dcd => '0',
+n_rts => rts1
+);
+
+sd1 : entity work.sd_controller
+port map(
+sdCS => sdCS,
+sdMOSI => sdMOSI,
+sdMISO => sdMISO,
+sdSCLK => sdSCLK,
+n_wr => n_sdCardCS or cpuClock or n_WR,
+n_rd => n_sdCardCS or cpuClock or (not n_WR),
+n_reset => n_reset,
+dataIn => cpuDataOut,
+dataOut => sdCardDataOut,
+regAddr => cpuAddress(2 downto 0),
+driveLED => driveLED,
+clk => sdClock -- twice the spi clk
+);
 	
 -- ____________________________________________________________________________________
 -- MEMORY READ/WRITE LOGIC GOES HERE
@@ -185,18 +224,50 @@ n_memWR <= not(cpuClock) nand (not n_WR);
 
 n_basRomCS <= '0' when cpuAddress(15 downto 13) = "111" else '1'; --8K at top of memory
 n_interface1CS <= '0' when cpuAddress(15 downto 1) = "111111111101000" else '1'; -- 2 bytes FFD0-FFD1
+n_sdCardCS <= '0' when cpuAddress(15 downto 3) = "1111111111011" else '1'; -- 8 bytes FFD8-FFDF
+n_interface2CS <= '0' when cpuAddress(15 downto 1) = "111111111101001" else '1'; -- 2 bytes FFD2-FFD3
 n_internalRam1CS <= not n_basRomCS;
---n_sdCardCS <= '0' when cpuAddress(15 downto 3) = "1111111111011" else '1'; -- 8 bytes FFD8-FFDF
+
 -- ____________________________________________________________________________________
 -- BUS ISOLATION GOES HERE
 
 cpuDataIn <=
 interface1DataOut when n_interface1CS = '0' else
---interface2DataOut when n_interface2CS = '0' else
---sdCardDataOut when n_sdCardCS = '0' else
+interface2DataOut when n_interface2CS = '0' else
+sdCardDataOut when n_sdCardCS = '0' else
 basRomData when n_basRomCS = '0' else
 internalRam1DataOut when n_internalRam1CS= '0' else
---sramData when n_externalRamCS= '0' else
 x"FF";
+
+-- SUB-CIRCUIT CLOCK SIGNALS
+serialClock <= serialClkCount(15);
+process (clk)
+begin
+if rising_edge(clk) then
+
+if sdClkCount < 49 then -- 1MHz
+sdClkCount <= sdClkCount + 1;
+else
+sdClkCount <= (others=>'0');
+end if;
+if sdClkCount < 25 then
+sdClock <= '0';
+else
+sdClock <= '1';
+end if;
+
+-- Serial clock DDS
+-- 50MHz master input clock:
+-- Baud Increment
+-- 115200 2416
+-- 38400 805
+-- 19200 403
+-- 9600 201
+-- 4800 101
+-- 2400 50
+serialClkCount <= serialClkCount + 2416;
+end if;
+end process;
+
 
 end;
