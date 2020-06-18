@@ -227,7 +227,7 @@ dataIn => cpuDataOut,
 dataOut => sdCardDataOut,
 regAddr => cpuAddress(2 downto 0),
 driveLED => driveLED,
-clk => sdClock -- twice the spi clk
+clk => clk -- twice the spi clk (SDHC - 50Mhz)
 );
 	
 -- ____________________________________________________________________________________
@@ -260,17 +260,6 @@ serialClock <= serialClkCount(15);
 process (clk)
 begin
 if rising_edge(clk) then
-
-if sdClkCount < 49 then -- 1MHz
-sdClkCount <= sdClkCount + 1;
-else
-sdClkCount <= (others=>'0');
-end if;
-if sdClkCount < 25 then
-sdClock <= '0';
-else
-sdClock <= '1';
-end if;
 
 -- Serial clock DDS
 -- 50MHz master input clock:
