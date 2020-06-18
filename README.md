@@ -1,21 +1,31 @@
-# zed-multicomp
-Zedboard implementation of multicomp. The zedboard has enough block ram to support the full 64k using internal ram. The ram code and memory map has been amended accordingly. The VGA routines and roms are based on those from a port to the Papilio-Duo. Some of the memory and clocking routines are based on work by Michael Jørgensen.
+# Zed-Multicomp
+Zedboard implementation of multicomp. The zedboard has enough block ram to support the full 64k using internal ram. The ram code and memory map has been amended accordingly. Some of the memory and clocking routines are based on work by Michael Jørgensen.
 
+# Hardware
+Diglient Zedboard: https://store.digilentinc.com/zedboard-zynq-7000-arm-fpga-soc-development-board/
 Requires a ps2 pmod in JA: https://reference.digilentinc.com/reference/pmod/pmodps2/start
-
-Zedboard 6502 rom is located in https://github.com/mattuna15/zed-multicomp/blob/master/ROMS/6502/basic_rom.hex
-Zedboard 6809 rom is located in https://github.com/mattuna15/zed-multicomp/blob/master/ROMS/6809/basic_6809.hex
-
-The original .hex files can be converted using Srecord. 
-http://srecord.sourceforge.net/
-
-Specify intel for input format and ascii-hex as output. Load resulting file into notepad++, remove header and trailer, replace spaces between values for "\n". 
-
-The resulting file then needs to be loaded into the rom file.
 
 Button C (centre button) is the reset button.
 
-NB You have full access to all RAM - max 56K
+# Building in Vivado 2019.2
+You can switch between builds either by loading the pre-build bitstreams on the releases page or by modifying the Vivado project. Instructions are here: http://searle.x10host.com/Multicomp/index.html
+
+Roms are loaded in the Microcomputer.vhd file. Specify the location of the rom on your PC.
+<ul>
+<li>Zedboard 6502 rom is located in https://github.com/mattuna15/zed-multicomp/blob/master/ROMS/6502/basic_rom.hex
+<li>Zedboard 6809 rom is located in https://github.com/mattuna15/zed-multicomp/blob/master/ROMS/6809/basic_6809.hex
+<li>Zedboard Z80 CPM rom is located here https://github.com/mattuna15/zed-multicomp/blob/master/ROMS/Z80/z80-CPM-basic.hex
+</ul>
+
+The original intel-altera .hex files can be converted using Srecord or use my files. http://srecord.sourceforge.net/
+
+Specify intel for input format and ascii-hex as output. Load resulting file into notepad++, remove header and trailer, replace spaces between values for "\n". The resulting file then needs to be loaded into the rom file.
+
+NB 
+<ul>
+<li>You have full access to all RAM - max 56K
+<li>CPM build requires extra changes http://searle.x10host.com/Multicomp/cpm/fpgaCPM.html
+</ul>
 
 <hr>
 Project acknowledgments: <br>
