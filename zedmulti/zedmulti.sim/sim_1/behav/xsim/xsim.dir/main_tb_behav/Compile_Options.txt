@@ -1,1 +1,1 @@
--wto "6b220fa1f3264992b75841638b45d9d8" --incr --debug "typical" --relax --mt "2" -L "blk_mem_gen_v8_4_4" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" -L "xpm" --snapshot "main_tb_behav" "xil_defaultlib.main_tb" "xil_defaultlib.glbl" -log "elaborate.log" 
+-wto "6b220fa1f3264992b75841638b45d9d8" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" -L "xpm" --snapshot "main_tb_behav" "xil_defaultlib.main_tb" "xil_defaultlib.glbl" -log "elaborate.log" 

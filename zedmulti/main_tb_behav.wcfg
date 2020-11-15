@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="main_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="main_tb" />
+            <top_module name="t65_pack" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="3747319020fs"></ZoomStartTime>
+      <ZoomEndTime time="3747493021fs"></ZoomEndTime>
+      <Cursor1Time time="2385309360fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="241"></NameColumnWidth>
+      <ValueColumnWidth column_width="113"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="32" />
+   <wvobject fp_name="/main_tb/main_inst/computer/cpuAddress" type="array">
+      <obj_property name="ElementShortName">cpuAddress[15:0]</obj_property>
+      <obj_property name="ObjectShortName">cpuAddress[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/cpuDataOut" type="array">
+      <obj_property name="ElementShortName">cpuDataOut[7:0]</obj_property>
+      <obj_property name="ObjectShortName">cpuDataOut[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/cpuDataIn" type="array">
+      <obj_property name="ElementShortName">cpuDataIn[7:0]</obj_property>
+      <obj_property name="ObjectShortName">cpuDataIn[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/MemAdr" type="array">
+      <obj_property name="ElementShortName">MemAdr[18:0]</obj_property>
+      <obj_property name="ObjectShortName">MemAdr[18:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/MemDB" type="array">
+      <obj_property name="ElementShortName">MemDB[7:0]</obj_property>
+      <obj_property name="ObjectShortName">MemDB[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/serialClkCount" type="array">
+      <obj_property name="ElementShortName">serialClkCount[15:0]</obj_property>
+      <obj_property name="ObjectShortName">serialClkCount[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/cpuClkCount" type="array">
+      <obj_property name="ElementShortName">cpuClkCount[5:0]</obj_property>
+      <obj_property name="ObjectShortName">cpuClkCount[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/serialClock" type="logic">
+      <obj_property name="ElementShortName">serialClock</obj_property>
+      <obj_property name="ObjectShortName">serialClock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/sysclk" type="logic">
+      <obj_property name="ElementShortName">sysclk</obj_property>
+      <obj_property name="ObjectShortName">sysclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/resetn" type="logic">
+      <obj_property name="ElementShortName">resetn</obj_property>
+      <obj_property name="ObjectShortName">resetn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_clk" type="logic">
+      <obj_property name="ElementShortName">main_clk</obj_property>
+      <obj_property name="ObjectShortName">main_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/clk25" type="logic">
+      <obj_property name="ElementShortName">clk25</obj_property>
+      <obj_property name="ObjectShortName">clk25</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/clk50" type="logic">
+      <obj_property name="ElementShortName">clk50</obj_property>
+      <obj_property name="ObjectShortName">clk50</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/cpuClock" type="logic">
+      <obj_property name="ElementShortName">cpuClock</obj_property>
+      <obj_property name="ObjectShortName">cpuClock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/basRomData" type="array">
+      <obj_property name="ElementShortName">basRomData[7:0]</obj_property>
+      <obj_property name="ObjectShortName">basRomData[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/cpu1/Clk" type="logic">
+      <obj_property name="ElementShortName">Clk</obj_property>
+      <obj_property name="ObjectShortName">Clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/cpu1/A" type="array">
+      <obj_property name="ElementShortName">A[23:0]</obj_property>
+      <obj_property name="ObjectShortName">A[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/n_WR" type="logic">
+      <obj_property name="ElementShortName">n_WR</obj_property>
+      <obj_property name="ObjectShortName">n_WR</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/n_RD" type="logic">
+      <obj_property name="ElementShortName">n_RD</obj_property>
+      <obj_property name="ObjectShortName">n_RD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/io1/dataIn" type="array">
+      <obj_property name="ElementShortName">dataIn[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dataIn[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/io1/dataOut" type="array">
+      <obj_property name="ElementShortName">dataOut[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dataOut[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/io1/txBuffer" type="array">
+      <obj_property name="ElementShortName">txBuffer[7:0]</obj_property>
+      <obj_property name="ObjectShortName">txBuffer[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/io1/txByteLatch" type="array">
+      <obj_property name="ElementShortName">txByteLatch[7:0]</obj_property>
+      <obj_property name="ObjectShortName">txByteLatch[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/io1/txByteWritten" type="logic">
+      <obj_property name="ElementShortName">txByteWritten</obj_property>
+      <obj_property name="ObjectShortName">txByteWritten</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/io1/txByteSent" type="logic">
+      <obj_property name="ElementShortName">txByteSent</obj_property>
+      <obj_property name="ObjectShortName">txByteSent</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/io1/txState" type="other">
+      <obj_property name="ElementShortName">txState</obj_property>
+      <obj_property name="ObjectShortName">txState</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/io1/rxd" type="logic">
+      <obj_property name="ElementShortName">rxd</obj_property>
+      <obj_property name="ObjectShortName">rxd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/io1/txd" type="logic">
+      <obj_property name="ElementShortName">txd</obj_property>
+      <obj_property name="ObjectShortName">txd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/serialClock" type="logic">
+      <obj_property name="ElementShortName">serialClock</obj_property>
+      <obj_property name="ObjectShortName">serialClock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/serialClkCount[15]" type="logic">
+      <obj_property name="ElementShortName">[15]</obj_property>
+      <obj_property name="ObjectShortName">[15]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/serialClkCount" type="array">
+      <obj_property name="ElementShortName">serialClkCount[15:0]</obj_property>
+      <obj_property name="ObjectShortName">serialClkCount[15:0]</obj_property>
+   </wvobject>
+</wave_config>
