@@ -53,9 +53,15 @@ port(
         ja            : inout std_logic_vector(7 downto 0);   -- PMOD pins 10..7, 4..1
         
         uart_txd_in   : in    std_logic;                      -- FT2232HQ UART TxD --> FPGA RxD   PACKAGE_PIN J17
-        uart_rxd_out  : out   std_logic                       -- FT2232HQ UART RxD <-- FPGA TxD   PACKAGE_PIN J18 
+        uart_rxd_out  : out   std_logic;                       -- FT2232HQ UART RxD <-- FPGA TxD   PACKAGE_PIN J18 
 
+
+        rxd2    : in std_logic; 
+        cts2    : in std_logic; 
+        txd2    : out std_logic;
+        rts2    : out std_logic
 	);
+	
 end multicomp_wrapper;
 
 architecture Behavioral of multicomp_wrapper is
@@ -115,8 +121,11 @@ begin
         RamCEn   => RamCEn,                      -- External SRAM CEn 
         
 		rxd1 => uart_txd_in,
-		txd1 => uart_rxd_out,
-		rts1 => open
+
+        rxd2 => rxd2,
+        cts2 => cts2, 
+        txd2 => txd2,
+        rts2 => rts2
 
     );
 

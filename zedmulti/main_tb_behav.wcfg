@@ -7,31 +7,31 @@
          <top_modules>
             <top_module name="glbl" />
             <top_module name="main_tb" />
-            <top_module name="t65_pack" />
+            <top_module name="tg68k_pack" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="3747319020fs"></ZoomStartTime>
-      <ZoomEndTime time="3747493021fs"></ZoomEndTime>
-      <Cursor1Time time="2385309360fs"></Cursor1Time>
+      <ZoomStartTime time="216264083853fs"></ZoomStartTime>
+      <ZoomEndTime time="216264421854fs"></ZoomEndTime>
+      <Cursor1Time time="216264365520fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="241"></NameColumnWidth>
-      <ValueColumnWidth column_width="113"></ValueColumnWidth>
+      <ValueColumnWidth column_width="109"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="32" />
+   <WVObjectSize size="47" />
    <wvobject fp_name="/main_tb/main_inst/computer/cpuAddress" type="array">
-      <obj_property name="ElementShortName">cpuAddress[15:0]</obj_property>
-      <obj_property name="ObjectShortName">cpuAddress[15:0]</obj_property>
+      <obj_property name="ElementShortName">cpuAddress[31:0]</obj_property>
+      <obj_property name="ObjectShortName">cpuAddress[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/main_tb/main_inst/computer/cpuDataOut" type="array">
-      <obj_property name="ElementShortName">cpuDataOut[7:0]</obj_property>
-      <obj_property name="ObjectShortName">cpuDataOut[7:0]</obj_property>
+      <obj_property name="ElementShortName">cpuDataOut[15:0]</obj_property>
+      <obj_property name="ObjectShortName">cpuDataOut[15:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/main_tb/main_inst/computer/cpuDataIn" type="array">
-      <obj_property name="ElementShortName">cpuDataIn[7:0]</obj_property>
-      <obj_property name="ObjectShortName">cpuDataIn[7:0]</obj_property>
+      <obj_property name="ElementShortName">cpuDataIn[15:0]</obj_property>
+      <obj_property name="ObjectShortName">cpuDataIn[15:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/main_tb/main_inst/computer/MemAdr" type="array">
       <obj_property name="ElementShortName">MemAdr[18:0]</obj_property>
@@ -82,16 +82,12 @@
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
    <wvobject fp_name="/main_tb/main_inst/computer/basRomData" type="array">
-      <obj_property name="ElementShortName">basRomData[7:0]</obj_property>
-      <obj_property name="ObjectShortName">basRomData[7:0]</obj_property>
+      <obj_property name="ElementShortName">basRomData[15:0]</obj_property>
+      <obj_property name="ObjectShortName">basRomData[15:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/main_tb/main_inst/computer/cpu1/Clk" type="logic">
-      <obj_property name="ElementShortName">Clk</obj_property>
-      <obj_property name="ObjectShortName">Clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/main_tb/main_inst/computer/cpu1/A" type="array">
-      <obj_property name="ElementShortName">A[23:0]</obj_property>
-      <obj_property name="ObjectShortName">A[23:0]</obj_property>
+   <wvobject fp_name="/main_tb/main_inst/computer/cpu1/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
    <wvobject fp_name="/main_tb/main_inst/computer/n_WR" type="logic">
       <obj_property name="ElementShortName">n_WR</obj_property>
@@ -148,5 +144,69 @@
    <wvobject fp_name="/main_tb/main_inst/computer/serialClkCount" type="array">
       <obj_property name="ElementShortName">serialClkCount[15:0]</obj_property>
       <obj_property name="ObjectShortName">serialClkCount[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/n_interface2CS" type="logic">
+      <obj_property name="ElementShortName">n_interface2CS</obj_property>
+      <obj_property name="ObjectShortName">n_interface2CS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/n_interface2CS" type="logic">
+      <obj_property name="ElementShortName">n_interface2CS</obj_property>
+      <obj_property name="ObjectShortName">n_interface2CS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/n_externalRamCS" type="logic">
+      <obj_property name="ElementShortName">n_externalRamCS</obj_property>
+      <obj_property name="ObjectShortName">n_externalRamCS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/n_internalRam1CS" type="logic">
+      <obj_property name="ElementShortName">n_internalRam1CS</obj_property>
+      <obj_property name="ObjectShortName">n_internalRam1CS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/n_internalRam2CS" type="logic">
+      <obj_property name="ElementShortName">n_internalRam2CS</obj_property>
+      <obj_property name="ObjectShortName">n_internalRam2CS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/n_basRom1CS" type="logic">
+      <obj_property name="ElementShortName">n_basRom1CS</obj_property>
+      <obj_property name="ObjectShortName">n_basRom1CS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/n_basRom2CS" type="logic">
+      <obj_property name="ElementShortName">n_basRom2CS</obj_property>
+      <obj_property name="ObjectShortName">n_basRom2CS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/n_basRom3CS" type="logic">
+      <obj_property name="ElementShortName">n_basRom3CS</obj_property>
+      <obj_property name="ObjectShortName">n_basRom3CS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/n_basRom4CS" type="logic">
+      <obj_property name="ElementShortName">n_basRom4CS</obj_property>
+      <obj_property name="ObjectShortName">n_basRom4CS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/n_basRomCS" type="logic">
+      <obj_property name="ElementShortName">n_basRomCS</obj_property>
+      <obj_property name="ObjectShortName">n_basRomCS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/n_interface1CS" type="logic">
+      <obj_property name="ElementShortName">n_interface1CS</obj_property>
+      <obj_property name="ObjectShortName">n_interface1CS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/cpu_as" type="logic">
+      <obj_property name="ElementShortName">cpu_as</obj_property>
+      <obj_property name="ObjectShortName">cpu_as</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/cpu_uds" type="logic">
+      <obj_property name="ElementShortName">cpu_uds</obj_property>
+      <obj_property name="ObjectShortName">cpu_uds</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/cpu_lds" type="logic">
+      <obj_property name="ElementShortName">cpu_lds</obj_property>
+      <obj_property name="ObjectShortName">cpu_lds</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/cpu_r_w" type="logic">
+      <obj_property name="ElementShortName">cpu_r_w</obj_property>
+      <obj_property name="ObjectShortName">cpu_r_w</obj_property>
+   </wvobject>
+   <wvobject fp_name="/main_tb/main_inst/computer/cpu_dtack" type="logic">
+      <obj_property name="ElementShortName">cpu_dtack</obj_property>
+      <obj_property name="ObjectShortName">cpu_dtack</obj_property>
    </wvobject>
 </wave_config>
