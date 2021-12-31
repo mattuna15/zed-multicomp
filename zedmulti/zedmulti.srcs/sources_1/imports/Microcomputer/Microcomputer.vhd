@@ -85,29 +85,27 @@ architecture struct of Microcomputer is
 begin
 -- ____________________________________________________________________________________
 -- CPU CHOICE GOES HERE
-cpu1 : entity work.T65
+cpu1 : entity work.cpu09
 port map(
-Enable => '1',
-Mode => "00",
-Res_n => n_reset,
-Clk => cpuClock,
-Rdy => '1',
-Abort_n => '1',
-IRQ_n => '1',
-NMI_n => '1',
-SO_n => '1',
-R_W_n => n_WR,
-A(23 downto 16) => topAddress,
-A(15 downto 0) => cpuAddress,
-DI => cpuDataIn,
-DO => cpuDataOut);
+clk => not(cpuClock),
+rst => not n_reset,
+rw => n_WR,
+addr => cpuAddress,
+data_in => cpuDataIn,
+data_out => cpuDataOut,
+halt => '0',
+hold => '0',
+irq => '0',
+firq => '0',
+nmi => '0');
+
 
 -- ____________________________________________________________________________________
 -- ROM GOES HERE	
 	rom1 : entity work.rom -- 8KB BASIC
 	generic map (
 	   G_ADDR_BITS => 13,
-	   G_INIT_FILE => "D:/code/multicomp/ROMS/6502/basic_rom.hex"
+	   G_INIT_FILE => "/home/mattp/zed-multicomp/ROMS/6809/bas_6809.hex"
 	)
     port map(
         addr_i => cpuAddress(12 downto 0),

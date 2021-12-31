@@ -1,10 +1,10 @@
-// Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Sat Nov 14 15:12:24 2020
-// Host        : DESKTOP-ID021MN running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top clk_wiz_0 -prefix
-//               clk_wiz_0_ clk_wiz_0_sim_netlist.v
+// Tool Version: Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
+// Date        : Wed Dec 29 13:15:48 2021
+// Host        : ubuntu running 64-bit Ubuntu 20.04.3 LTS
+// Command     : write_verilog -force -mode funcsim
+//               /home/mattp/zed-multicomp/zedmulti/zedmulti.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.v
 // Design      : clk_wiz_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -34,7 +34,7 @@ module clk_wiz_0
   wire locked;
   wire resetn;
 
-  clk_wiz_0_clk_wiz_0_clk_wiz inst
+  clk_wiz_0_clk_wiz inst
        (.clk100(clk100),
         .clk25(clk25),
         .clk50(clk50),
@@ -43,7 +43,7 @@ module clk_wiz_0
         .resetn(resetn));
 endmodule
 
-module clk_wiz_0_clk_wiz_0_clk_wiz
+module clk_wiz_0_clk_wiz
    (clk50,
     clk25,
     clk100,
